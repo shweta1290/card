@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="stage1" class="stage">
+        <h1>Welcome to the World of Love 💖</h1>
+        <img src="2t0o_u10j_170817.jpg" 
+             id="door" alt="Closed Door">
+    </div>
+
+    <div id="stage2" class="stage hidden">
+        <!-- Video element (initially hidden) -->
+        <video id="envelope" autoplay loop muted style="display: none;">
+            <source src="envelope.mp4" type="video/mp4">
+            <p>Your browser does not support HTML5 video.</p>
+        </video>
+        <!-- Button to open the envelope -->
+        <button id="open-envelope-btn" onclick="openEnvelope()">Open the Envelope</button>
+
+        <!-- Reveal button (initially hidden) -->
+        <button id="reveal-btn" onclick="revealStage3()" style="display: none;">Reveal</button>
+    </div>
+    
+
+    <div id="stage3" class="stage hidden">
+        <h1 id="letter-text" class="hidden">Oh dear, will you be my Valentine? 💌</h1>
+        <button id="yes-btn">Yes 💘</button>
+        <button id="no-btn">No 😢</button>
+    </div>
+
+    <div id="stage4" class="stage hidden">
+        <h1>Yay! 🎉 Thank you, my love! 💖</h1>
+        <img id="thank-you-gif" src="bears.gif" alt="Thank You">
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="door-sound">
+        <source src="door-creak.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="envelope-sound">
+        <source src="envelope-open.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound">
+        <source src="click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="heart-pop">
+        <source src="heart-pop.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
